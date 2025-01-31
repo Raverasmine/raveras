@@ -5,7 +5,7 @@ import { MenuIcon } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className='bg-[#070808] py-5 px-5 sticky top-0 z-10'>
+    <header className='bg-[#070808] py-5 px-5 sticky top-0 z-10 md:px-16'>
       <div className='flex justify-between items-center w-full'>
         <Image
           src='/globe.svg'

@@ -113,7 +113,7 @@ const About = () => {
           )}
         >
           <Image
-            src='/pexels-ywanphot.png'
+            src='/trucks.png'
             alt='Tractor'
             fill
             className='object-cover transition-transform duration-700 hover:scale-110'

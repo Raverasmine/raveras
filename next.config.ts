@@ -7,7 +7,12 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "photos.zillowstatic.com",
         port: "",
-        // pathname: '/account123/**',
+        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "thumbs.dreamstime.com",
+        port: "",
         search: "",
       },
     ],

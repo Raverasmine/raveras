@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 
 import Hero from "@/components/hero";
+import ScrollToTop from "@/components/scrollToTop";
 
 export default function Home() {
   useEffect(() => {
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <div>
       <Hero />
+      <ScrollToTop />
     </div>
   );
 }

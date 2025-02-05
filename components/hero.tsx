@@ -16,18 +16,21 @@ const Hero = () => {
   }, []);
   return (
     <section className='relative h-screen overflow-hidden'>
-      <div
-        className='absolute inset-0'
-        style={{
-          backgroundImage:
-            "url('https://cdn.businessday.ng/2021/07/luxury-residential-real-estate.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          transform: `translateY(${offset * 0.5}px)`,
-        }}
+      {/* Video Background */}
+      <video
+        className='absolute inset-0 w-full h-full object-cover transition-transform duration-300'
+        style={{ transform: `translateY(${offset * 0.5}px)` }}
+        autoPlay
+        loop
+        muted
+        playsInline
       >
-        <div className='absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-transparent' />
-      </div>
+        <source src='/raveras-bg.mp4' type='video/mp4' />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Gradient Overlay */}
+      <div className='absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-transparent' />
       <div className='relative container mx-auto px-4 h-full flex flex-col justify-center'>
         <div className='max-w-3xl space-y-6'>
           <h1
@@ -38,23 +41,27 @@ const Hero = () => {
           <p
             className={`${libreFranklin.className} text-lg md:text-xl text-white/80 max-w-xl animate-fade-up animation-delay-100`}
           >
-            Let our expert guide you through the maze of real estate and help
-            you find the perfect home you deserve.
+            Raveras Mines is a leading mining company committed to the
+            responsible and sustainable extraction of rare earth minerals in
+            West Africa. With advanced technology and strong environmental,
+            social, and governance practices, Raveras unlocks the region’s
+            mineral potential while creating lasting economic benefits for local
+            communities.
           </p>
           <Button
-            className={`${jetbrainsMono.className} bg-white text-[#3D0C11] hover:bg-white/90 transition-colors animate-fade-up animation-delay-200`}
+            className={`${jetbrainsMono.className} bg-white text-[#f6bd41] hover:bg-white/90 transition-colors animate-fade-up animation-delay-200`}
             size='lg'
           >
-            Explore Properties
+            Learn more
           </Button>
         </div>
-        <div className='absolute bottom-32 right-4 md:right-16 max-w-md text-right animate-fade-up animation-delay-300'>
+        {/* <div className='absolute bottom-32 right-4 md:right-16 max-w-md text-right animate-fade-up animation-delay-300'>
           <h2
             className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-white leading-tight`}
           >
             Journey To Your Perfect Home
           </h2>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { jetbrainsMono } from "@/app/fonts";
 import { Twitter, Instagram, Linkedin } from "lucide-react";
 

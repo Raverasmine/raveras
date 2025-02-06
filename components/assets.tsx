@@ -1,6 +1,5 @@
 "use client";
 
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { poppins } from "@/app/fonts";
 
@@ -9,11 +8,6 @@ import Image from "next/image";
 import InteractiveMap from "./interactiveMap";
 
 const Assets = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   const assets = [
     {
       name: "Spodumene",
@@ -34,7 +28,7 @@ const Assets = () => {
   ];
 
   return (
-    <section id='assets' ref={ref} className='bg-black text-white pt-24'>
+    <section id='assets' className='bg-black text-white pt-24'>
       <motion.h2
         className={`${poppins.className} text-4xl md:text-5xl font-bold text-[#f6bd41] mb-8 tracking-tight text-center`}
         variants={{

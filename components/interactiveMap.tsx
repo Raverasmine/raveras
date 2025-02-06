@@ -3,10 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Fix for default marker icons
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
-
 const DefaultIcon = L.icon({
   iconUrl: "/leaflet/marker-icon.png",
   // shadowUrl: "/leaflet/marker-shadow.avif",

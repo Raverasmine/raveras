@@ -6,6 +6,7 @@ import { poppins } from "@/app/fonts";
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import InteractiveMap from "./interactiveMap";
 
 const Assets = () => {
   const { ref, inView } = useInView({
@@ -33,7 +34,7 @@ const Assets = () => {
   ];
 
   return (
-    <section id='assets' ref={ref} className='bg-black text-white py-24'>
+    <section id='assets' ref={ref} className='bg-black text-white pt-24'>
       <motion.h2
         className={`${poppins.className} text-4xl md:text-5xl font-bold text-[#f6bd41] mb-8 tracking-tight text-center`}
         variants={{
@@ -48,7 +49,7 @@ const Assets = () => {
         Our Assets
       </motion.h2>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-16 container mx-auto px-4 mt-32 max-w-3xl'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-16 container mx-auto px-4 py-32 max-w-3xl'>
         {assets.map(({ imageUrl, name }, index) => (
           <Card
             key={index}
@@ -70,6 +71,39 @@ const Assets = () => {
             </CardHeader>
           </Card>
         ))}
+      </div>
+
+      <div>
+        <InteractiveMap />
+      </div>
+
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto px-4  gap-8 py-24 max-w-6xl'>
+        <Card className='bg-zinc-900 p-6 border-yellow-400/20'>
+          <h3 className='text-yellow-400 text-lg font-semibold mb-2'>
+            Ibadan Facility
+          </h3>
+          <p className='text-zinc-300'>
+            Concentrating Lithium Ore of Spodumene
+          </p>
+        </Card>
+
+        <Card className='bg-zinc-900 p-6 border-yellow-400/20'>
+          <h3 className='text-yellow-400 text-lg font-semibold mb-2'>
+            Jos Facility
+          </h3>
+          <p className='text-zinc-300'>
+            Processing Tin, Columbite, Tantalite, Zircon, Monazite
+          </p>
+        </Card>
+
+        <Card className='bg-zinc-900 p-6 border-yellow-400/20'>
+          <h3 className='text-yellow-400 text-lg font-semibold mb-2'>
+            Udegi Facility
+          </h3>
+          <p className='text-zinc-300'>
+            Processing Tin, Columbite, Tantalite, Zircon, Monazite
+          </p>
+        </Card>
       </div>
     </section>
   );

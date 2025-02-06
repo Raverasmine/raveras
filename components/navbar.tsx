@@ -62,17 +62,7 @@ const Navbar = () => {
               </div>
             ))}
           </div>
-          <div className='hidden md:block'>
-            <Button
-              className={cn(
-                `${jetbrainsMono.className} bg-[#f6bd41] text-black hover:bg-[#f6de41] transition-all duration-300`,
-                !isScrolled && "bg-white/10 backdrop-blur-sm hover:bg-white/20",
-                "hover:scale-105"
-              )}
-            >
-              Get Started
-            </Button>
-          </div>
+          <div></div>
           <button
             className='md:hidden text-[#f6bd41] transition-transform duration-300 hover:scale-110'
             onClick={() => setIsOpen(!isOpen)}
@@ -103,12 +93,6 @@ const Navbar = () => {
                   </Link>
                 </div>
               ))}
-              <Button
-                className={`${jetbrainsMono.className} bg-[#f6bd41]  text-black hover:bg-[#f6de41] transition-colors w-full`}
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Button>
             </div>
           </motion.div>
         )}

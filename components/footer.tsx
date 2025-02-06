@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { jetbrainsMono } from "@/app/fonts";
 import { Twitter, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
@@ -8,31 +9,40 @@ const Footer = () => {
       <div className='container mx-auto px-4'>
         <div className='flex flex-col items-center space-y-12'>
           {/* Logo */}
-          <div className='relative w-16 h-16'>
-            <Image
-              src='/globe.svg'
-              alt='Logo'
-              width={36}
-              height={36}
-              className='relative z-10 '
-            />
-          </div>
+          <Link
+            href='/'
+            className={`${jetbrainsMono.className} text-2xl font-bold text-black transition-all duration-300 hover:scale-105`}
+          >
+            Raveras
+          </Link>
 
           {/* Navigation */}
           <nav className='flex flex-wrap justify-center gap-x-8 gap-y-4'>
-            <Link
-              href='/features'
-              className=' hover:text-white transition-colors'
-            >
+            <Link href='/' className=' hover:opacity-60 transition-colors'>
               Home
             </Link>
-            <Link href='/about' className=' hover:text-white transition-colors'>
+            <Link href='#about' className=' hover:opacity-60 transition-colors'>
               About
             </Link>
 
             <Link
-              href='/customers'
-              className=' hover:text-white transition-colors'
+              href='#projects'
+              className='hover:opacity-60 transition-colors'
+            >
+              Our Projects
+            </Link>
+            <Link
+              href='#sustainability'
+              className='hover:opacity-60 transition-colors'
+            >
+              Sustainability
+            </Link>
+            <Link href='#assets' className='hover:opacity-60 transition-colors'>
+              Our Assets
+            </Link>
+            <Link
+              href='#contact'
+              className='hover:opacity-60 transition-colors'
             >
               Contact
             </Link>

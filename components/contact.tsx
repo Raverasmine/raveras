@@ -43,10 +43,15 @@ const Contact = () => {
   });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    // const { name, email, subject, message } = values;
-    console.log(values);
+    const { name, email, subject, message } = values;
 
-    // const mailToLink = `mailto:leomirandadev@gmail.com?subject=${subject}&body=Hello I am ${name}, my Email is ${email}. %0D%0A${message}`;
+    const mailToLink = `mailto:contact@raverasmines.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Hello, my name is ${name}.\n\n${message}\n\nYou can reach me at: ${email}`
+    )}`;
+
+    window.location.href = mailToLink;
   };
 
   return (

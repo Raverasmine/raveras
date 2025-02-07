@@ -2,10 +2,10 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
+import { useEffect, useState } from "react";
 
 const DefaultIcon = L.icon({
   iconUrl: "/leaflet/marker-icon.png",
-  // shadowUrl: "/leaflet/marker-shadow.avif",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
 });
@@ -16,7 +16,7 @@ type Facility = {
   name: string;
   description: string;
   minerals: string[];
-  coordinates: [number, number]; // [latitude, longitude]
+  coordinates: [number, number];
 };
 
 const facilities: Facility[] = [
@@ -41,16 +41,24 @@ const facilities: Facility[] = [
 ];
 
 const InteractiveMap = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <MapContainer
-      center={[9.082, 8.6753]} // Center of Nigeria
+      center={[9.082, 8.6753]}
       zoom={6}
-      zoomControl={false}
-      scrollWheelZoom={false}
-      doubleClickZoom={false}
-      dragging={false}
-      style={{ height: "600px", width: "100%" }}
-      className='overflow-hidden'
+      zoomControl={true}
+      scrollWheelZoom={isMobile}
+      doubleClickZoom={isMobile}
+      dragging={isMobile}
+      className='w-full h-[50vh] md:h-[70vh] min-h-[400px]'
     >
       <TileLayer
         url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'

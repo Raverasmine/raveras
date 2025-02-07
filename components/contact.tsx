@@ -54,10 +54,10 @@ const Contact = () => {
       id='contact'
       className='bg-white text-black py-24 px-4 container mx-auto'
     >
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-        <div>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 '>
+        <div className='mb-16'>
           <motion.h2
-            className={`${poppins.className} text-4xl md:text-5xl font-bold text-[#f6bd41] mb-8 tracking-tight`}
+            className={`${poppins.className} text-4xl md:text-5xl font-bold text-[#f6bd41] mb-8 tracking-tight text-center md:text-left`}
             variants={{
               hidden: { opacity: 0, y: 20 },
               visible: {
@@ -70,26 +70,30 @@ const Contact = () => {
             Contact us
           </motion.h2>
 
-          <div className='flex flex-col gap-4'>
-            <div>
+          <div className='flex flex-col md:flex-row gap-8 mt-24 place-items-center'>
+            <div className='flex flex-col gap-4 place-items-center md:place-items-start'>
               <div className='flex gap-2 mb-1'>
                 <Phone />
                 <div className='font-bold'>Call us</div>
               </div>
 
-              <div>08027777752</div>
+              <a
+                href='tel:+234-802-777-7752'
+                className='text-yellow-400 font-bold hover:underline'
+              >
+                +234 802 777 7752
+              </a>
             </div>
 
-            <div>
+            <div className='flex flex-col gap-4 place-items-center md:place-items-start'>
               <div className='flex gap-2 mb-1'>
                 <Mail />
                 <div className='font-bold'>Mail us</div>
               </div>
 
-              <div>contact@raverasmines.com</div>
               <a
                 href='mailto:contact@raverasmines.com'
-                className='text-yellow-400 hover:underline'
+                className='text-yellow-400 font-bold hover:underline'
               >
                 contact@raverasmines.com
               </a>
@@ -179,7 +183,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button className='mt-4 bg-[#f6bd41] text-black hover:bg-[#f6de41] transition-colors animate-fade-up animation-delay-200'>
+                <Button className='mt-4 bg-[#f6bd41] text-black font-bold hover:bg-[#f6de41] transition-colors animate-fade-up animation-delay-200'>
                   Send message
                 </Button>
               </form>

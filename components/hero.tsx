@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { libreFranklin, jetbrainsMono } from "@/app/fonts";
-import { Button } from "@/components/ui/button";
+import { libreFranklin } from "@/app/fonts";
+import Link from "next/link";
 
 const Hero = () => {
   const [offset, setOffset] = useState(0);
@@ -52,12 +52,15 @@ const Hero = () => {
             mineral potential while creating lasting economic benefits for local
             communities.
           </p>
-          <Button
-            className={`${jetbrainsMono.className} bg-white text-[#f6bd41] hover:bg-white/90 transition-colors animate-fade-up animation-delay-200`}
-            size='lg'
-          >
-            Learn more
-          </Button>
+
+          <div className='mt-16'>
+            <Link
+              href='#about'
+              className='px-6 py-3 rounded-md bg-white text-[#f6bd41] hover:bg-white/90 transition-colors animate-fade-up animation-delay-200'
+            >
+              Learn more
+            </Link>
+          </div>
         </div>
       </div>
     </section>

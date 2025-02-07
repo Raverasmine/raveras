@@ -8,12 +8,16 @@ const Hero = () => {
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {
+    if (typeof window === "undefined") return; // ✅ Prevent SSR issues
+
     const handleScroll = () => {
-      setOffset(window.pageYOffset);
+      setOffset(window.scrollY);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <section className='relative h-screen overflow-hidden'>
       {/* Video Background */}
@@ -55,13 +59,6 @@ const Hero = () => {
             Learn more
           </Button>
         </div>
-        {/* <div className='absolute bottom-32 right-4 md:right-16 max-w-md text-right animate-fade-up animation-delay-300'>
-          <h2
-            className={`${jetbrainsMono.className} text-2xl md:text-4xl font-bold text-white leading-tight`}
-          >
-            Journey To Your Perfect Home
-          </h2>
-        </div> */}
       </div>
     </section>
   );

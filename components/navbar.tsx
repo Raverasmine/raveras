@@ -15,14 +15,18 @@ const navItems = [
   { name: "Our Assets", href: "#assets" },
   { name: "Contact", href: "#contact" },
 ];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    if (typeof window === "undefined") return; // ✅ Prevents SSR issues
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -61,7 +65,6 @@ const Navbar = () => {
               </div>
             ))}
           </div>
-          <div></div>
           <button
             className='md:hidden text-[#f6bd41] transition-transform duration-300 hover:scale-110'
             onClick={() => setIsOpen(!isOpen)}
@@ -70,6 +73,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+
       {/* Mobile menu */}
       <AnimatePresence>
         {isOpen && (

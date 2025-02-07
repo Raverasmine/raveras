@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import type LocomotiveScroll from "locomotive-scroll";
 
 import Hero from "@/components/hero";
 import ScrollToTop from "@/components/scrollToTop";
@@ -12,13 +13,24 @@ import Sustainability from "@/components/sustainability";
 import Assets from "@/components/assets";
 import Contact from "@/components/contact";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   useEffect(() => {
-    (async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+    if (typeof window !== "undefined") {
+      let locomotiveScroll: LocomotiveScroll | null = null;
 
-      const locomotiveScroll = new LocomotiveScroll(); // eslint-disable-line
-    })();
+      (async () => {
+        const LocomotiveScroll = (await import("locomotive-scroll")).default;
+        locomotiveScroll = new LocomotiveScroll();
+      })();
+
+      return () => {
+        if (locomotiveScroll) {
+          locomotiveScroll.destroy(); // Cleanup
+        }
+      };
+    }
   }, []);
 
   return (

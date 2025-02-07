@@ -1,11 +1,15 @@
 "use client";
 
+import dynamic from "next/dynamic";
+
 import { motion } from "framer-motion";
 import { poppins } from "@/app/fonts";
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
-import InteractiveMap from "./interactiveMap";
+const InteractiveMap = dynamic(() => import("@/components/interactiveMap"), {
+  ssr: false,
+});
 
 const Assets = () => {
   const assets = [

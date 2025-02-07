@@ -87,6 +87,12 @@ const Contact = () => {
               </div>
 
               <div>contact@raverasmines.com</div>
+              <a
+                href='mailto:contact@raverasmines.com'
+                className='text-yellow-400 hover:underline'
+              >
+                contact@raverasmines.com
+              </a>
             </div>
           </div>
         </div>

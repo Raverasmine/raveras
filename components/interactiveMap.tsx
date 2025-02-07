@@ -53,7 +53,7 @@ const InteractiveMap = () => {
   return (
     <MapContainer
       center={[9.082, 8.6753]}
-      zoom={6}
+      zoom={5}
       zoomControl={true}
       scrollWheelZoom={isMobile}
       doubleClickZoom={isMobile}

@@ -47,7 +47,7 @@ const Assets = () => {
         Our Assets
       </motion.h2>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-16 container mx-auto px-4 py-32 max-w-3xl'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-16 container mx-auto px-8 py-32 max-w-3xl'>
         {assets.map(({ imageUrl, name }, index) => (
           <Card
             key={index}

@@ -37,7 +37,7 @@ const Sustainability = () => {
   });
 
   return (
-    <section id='sustainability' ref={ref} className='py-24 bg-white'>
+    <section id='sustainability' ref={ref} className='py-24 bg-white px-4'>
       <motion.h2
         className={`${poppins.className} text-4xl md:text-5xl font-bold text-[#f6bd41] mb-8 tracking-tight text-center`}
         variants={{

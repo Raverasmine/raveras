@@ -30,7 +30,7 @@ const About = () => {
   });
 
   return (
-    <section id='about' ref={ref} className='py-24 bg-white'>
+    <section id='about' ref={ref} className='py-24 bg-white px-4'>
       <div className='container mx-auto px-4 space-y-32'>
         <div className='flex flex-col lg:flex-row gap-16 items-start'>
           <div className='lg:w-1/2 space-y-6'>

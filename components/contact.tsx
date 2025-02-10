@@ -59,7 +59,7 @@ const Contact = () => {
         body: JSON.stringify(values),
       });
 
-      if (res.ok) {
+      if (res.status === 200) {
         toast({
           title: "Message Sent",
           description:
@@ -71,6 +71,7 @@ const Contact = () => {
       }
     } catch (error) {
       toast({
+        variant: "destructive",
         title: "Failed to Send Message",
         description:
           error instanceof Error ? error.message : "Something went wrong.",

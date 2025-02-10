@@ -28,7 +28,7 @@ export default function Home() {
         />
         <meta
           name='keywords'
-          content='Rare Earth Minerals, Sustainable Mining, Lithium Mining in Nigeria, Spodumene Ore Production, West Africa Mining Hub, Responsible Mining Practices, Environmental and Social Governance, Shaki Project Nigeria, Iseyin Lithium Deposits, Mineral Processing Facilities, Low-Cost Rare Earth Production, African Mining Sector Growth, Sustainable Resource Extraction, Rare Earth Elements Supply, Mining Infrastructure Development, ibadan, udegi, jos, Shaki Spodumene, Iseyin Lithium'
+          content='Rare Earth Minerals, Sustainable Mining, Lithium Mining in Nigeria, Spodumene Ore Production, West Africa Mining Hub, Responsible Mining Practices, Environmental and Social Governance, Shaki Project Nigeria, Iseyin Lithium Deposits, Mineral Processing Facilities, Low-Cost Rare Earth Production, African Mining Sector Growth, Sustainable Resource Extraction, Rare Earth Elements Supply, Mining Infrastructure Development, ibadan, udegi, jos, Shaki Spodumene, Iseyin Lithium, raveras mines, raveras, raverasmines'
         />
         <meta
           property='og:title'

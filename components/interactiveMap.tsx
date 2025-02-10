@@ -32,12 +32,12 @@ const facilities: Facility[] = [
     minerals: ["Tin", "Columbite", "Tantalite", "Zircon", "Monazite"],
     coordinates: [9.8965, 8.8583],
   },
-  {
-    name: "Udegi Facility",
-    description: "Processing various minerals",
-    minerals: ["Tin", "Columbite", "Tantalite", "Zircon", "Monazite"],
-    coordinates: [8.3017, 7.0831],
-  },
+  // {
+  //   name: "Udegi Facility",
+  //   description: "Processing various minerals",
+  //   minerals: ["Tin", "Columbite", "Tantalite", "Zircon", "Monazite"],
+  //   coordinates: [8.3017, 7.0831],
+  // },
 ];
 
 const InteractiveMap = () => {

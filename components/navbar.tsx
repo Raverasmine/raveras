@@ -45,9 +45,9 @@ const Navbar = () => {
         <div className='flex justify-between items-center'>
           <Link
             href='/'
-            className={`${jetbrainsMono.className} text-2xl font-bold text-[#f6bd41] transition-all duration-300 hover:scale-105`}
+            className='text-2xl font-bold text-[#f6bd41] transition-all duration-300 hover:scale-105'
           >
-            Raveras
+            RAVERAS
           </Link>
           <div className='hidden md:flex space-x-8 items-center'>
             {navItems.map((item) => (

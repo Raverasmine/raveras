@@ -15,19 +15,19 @@ const Assets = () => {
   const assets = [
     {
       name: "Spodumene",
-      imageUrl: "/spodumene.webp",
+      imageUrl: "/ore.jpg",
     },
     {
       name: "Zircon Sand",
-      imageUrl: "/zircon.webp",
+      imageUrl: "/sand.avif",
     },
-    {
-      name: "Gold",
-      imageUrl: "/gold.webp",
-    },
+    // {
+    //   name: "Gold",
+    //   imageUrl: "/gold.webp",
+    // },
     {
       name: "Tin",
-      imageUrl: "/tin.webp",
+      imageUrl: "/tin.jpg",
     },
   ];
 
@@ -47,7 +47,7 @@ const Assets = () => {
         Our Assets
       </motion.h2>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-16 container mx-auto px-8 py-32 max-w-3xl'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-16 container mx-auto px-8 py-32 max-w-6xl'>
         {assets.map(({ imageUrl, name }, index) => (
           <Card
             key={index}
@@ -60,7 +60,7 @@ const Assets = () => {
                   alt={name}
                   width={300}
                   height={300}
-                  className='w-full aspect-square object-cover saturate-0 transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]'
+                  className='w-full aspect-square object-fit transition-all duration-200 ease-linear size-full group-hover/hoverimg:saturate-100 group-hover/hoverimg:scale-[1.01]'
                 />
               </div>
               <CardTitle className='py-6 pb-4 px-6 bg-white text-[#f6bd41] capitalize'>
@@ -75,33 +75,29 @@ const Assets = () => {
         <InteractiveMap />
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto px-4  gap-8 py-24 max-w-6xl'>
+      <div className='grid grid-cols-1 md:grid-cols-2  mx-auto px-4  gap-8 py-24 max-w-6xl'>
         <Card className='bg-zinc-900 p-6 border-yellow-400/20'>
           <h3 className='text-yellow-400 text-lg font-semibold mb-2'>
             Ibadan Facility
           </h3>
-          <p className='text-zinc-300'>
-            Concentrating Lithium Ore of Spodumene
-          </p>
+          <p className='text-zinc-300'>Processing of Spodumene</p>
         </Card>
 
         <Card className='bg-zinc-900 p-6 border-yellow-400/20'>
           <h3 className='text-yellow-400 text-lg font-semibold mb-2'>
             Jos Facility
           </h3>
-          <p className='text-zinc-300'>
-            Processing Tin, Columbite, Tantalite, Zircon, Monazite
-          </p>
+          <p className='text-zinc-300'>Processing Tin and, Zircon.</p>
         </Card>
 
-        <Card className='bg-zinc-900 p-6 border-yellow-400/20'>
+        {/* <Card className='bg-zinc-900 p-6 border-yellow-400/20'>
           <h3 className='text-yellow-400 text-lg font-semibold mb-2'>
             Udegi Facility
           </h3>
           <p className='text-zinc-300'>
             Processing Tin, Columbite, Tantalite, Zircon, Monazite
           </p>
-        </Card>
+        </Card> */}
       </div>
     </section>
   );

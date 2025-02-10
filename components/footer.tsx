@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { jetbrainsMono } from "@/app/fonts";
 import { Twitter, Instagram, Linkedin } from "lucide-react";
 
 const Footer = () => {
@@ -10,38 +9,46 @@ const Footer = () => {
           {/* Logo */}
           <Link
             href='/'
-            className={`${jetbrainsMono.className} text-2xl font-bold text-black transition-all duration-300 hover:scale-105`}
+            className='text-2xl font-bold text-black transition-all duration-300 hover:scale-105'
           >
-            Raveras
+            RAVERAS
           </Link>
 
           {/* Navigation */}
           <nav className='flex flex-wrap justify-center gap-x-8 gap-y-4'>
-            <Link href='/' className=' hover:opacity-60 transition-colors'>
+            <Link
+              href='/'
+              className='hover:opacity-60 transition-colors border-r border-black pr-4 last:border-r-0'
+            >
               Home
             </Link>
-            <Link href='#about' className=' hover:opacity-60 transition-colors'>
+            <Link
+              href='#about'
+              className='hover:opacity-60 transition-colors border-r border-black pr-4 last:border-r-0'
+            >
               About
             </Link>
-
             <Link
               href='#projects'
-              className='hover:opacity-60 transition-colors'
+              className='hover:opacity-60 transition-colors border-r border-black pr-4 last:border-r-0'
             >
               Our Projects
             </Link>
             <Link
               href='#sustainability'
-              className='hover:opacity-60 transition-colors'
+              className='hover:opacity-60 transition-colors border-r border-black pr-4 last:border-r-0'
             >
               Sustainability
             </Link>
-            <Link href='#assets' className='hover:opacity-60 transition-colors'>
+            <Link
+              href='#assets'
+              className='hover:opacity-60 transition-colors border-r border-black pr-4 last:border-r-0'
+            >
               Our Assets
             </Link>
             <Link
               href='#contact'
-              className='hover:opacity-60 transition-colors'
+              className='hover:opacity-60 transition-colors pr-4'
             >
               Contact
             </Link>

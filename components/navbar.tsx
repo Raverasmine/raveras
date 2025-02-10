@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { libreFranklin, jetbrainsMono } from "@/app/fonts";
+import { libreFranklin } from "@/app/fonts";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [

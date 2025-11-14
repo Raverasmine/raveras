@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { poppins } from "@/app/fonts";
 import { useState } from "react";
 
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+
 import {
   Card,
   CardContent,
@@ -102,7 +105,7 @@ const Contact = () => {
             Contact us
           </motion.h2>
 
-          <div className='flex flex-col md:flex-row gap-8 mt-24 place-items-center'>
+          <div className='flex flex-col md:flex-row gap-8 mt-24 place-items-center mb-24'>
             <div className='flex flex-col gap-4 place-items-center md:place-items-start'>
               <div className='flex gap-2 mb-1'>
                 <Mail />
@@ -115,6 +118,19 @@ const Contact = () => {
                 contact@raverasmines.com
               </a>
             </div>
+          </div>
+
+          <div
+            className={cn(
+              "relative h-96 rounded-2xl overflow-hidden transition-all duration-700 delay-700 max-w-screen-lg mx-auto"
+            )}
+          >
+            <Image
+              src='/trucks.png'
+              alt='Tractor'
+              fill
+              className='object-cover transition-transform duration-700 hover:scale-110'
+            />
           </div>
         </div>
 

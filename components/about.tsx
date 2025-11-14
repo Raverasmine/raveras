@@ -106,19 +106,31 @@ const About = () => {
           </div>
         </div>
 
-        <div
-          className={cn(
-            "relative h-96 rounded-2xl overflow-hidden transition-all duration-700 delay-700 max-w-screen-lg mx-auto",
-            inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          )}
-        >
-          <Image
-            src='/trucks.png'
-            alt='Tractor'
-            fill
-            className='object-cover transition-transform duration-700 hover:scale-110'
-          />
-        </div>
+        <section className='py-12 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto space-y-20'>
+            <div
+              className={`grid md:grid-cols-2 gap-12 items-center lg:gap-24`}
+            >
+              {/* Image */}
+              <div className='bg-card border border-border rounded-xl overflow-hidden'>
+                <img
+                  src='/mine1.JPG'
+                  alt='raveras mines'
+                  className='w-full  object-cover'
+                />
+              </div>
+
+              {/* Image */}
+              <div className='bg-card border border-border rounded-xl overflow-hidden'>
+                <img
+                  src='/mine2.JPG'
+                  alt='raveras mines'
+                  className='w-full object-cover'
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   );
